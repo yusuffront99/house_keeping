@@ -102,7 +102,7 @@ span#footer-logo-page2 img {
     margin-left: 13px;
     font-weight: normal;
     text-align: justify;
-    margin-bottom: 58px;
+    margin-bottom: 10px;
 }
 
 #boiler {
@@ -123,6 +123,26 @@ span#footer-logo-page3 img {
 
 /* CONTENT PAGE 4 */
 .content-table{
-    margin-bottom: 213px;
+    margin-bottom: 138px;
 }
 /* CONTENT PAGE 4 */
+
+/* CONTENT PAGE 5 */
+th#th-evaluasi {
+    width: 250px;
+}
+th#th-rekomendasi {
+    width: 250px;
+}
+th#th-pic {
+    width: 125px;
+}
+
+td#empty {
+    padding: 10px;
+}
+
+.content-page5 {
+    margin-bottom: 175px;
+}
+/* CONTENT PAGE 5 */

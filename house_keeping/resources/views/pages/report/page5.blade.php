@@ -6,7 +6,9 @@
     <span id="header-logo-right">
       <img src="{{public_path('images/logo.jpeg')}}" alt="" width="20%">
     </span>
-    <!-- CONTENT -->
+     
+    <div class="content-page5">
+      <!-- CONTENT -->
     <div class="content-page3">
      2. Bahan dan Peralatan yang digunakan :
         <ol style="list-style-type: lower-alpha; margin-left:-10px; font-weight:normal;">
@@ -42,32 +44,42 @@
      <div style="margin-left: 0px;">
         <table class="table-bordered text-center">
           <tr>
-            <td>Evaluasi</td>
-            <td>Rekomendasi</td>
-            <td>PIC</td>
+            <th id="th-evaluasi">Evaluasi</th>
+            <th id="th-rekomendasi">Rekomendasi</th>
+            <th id="th-pic">PIC</th>
           </tr>
 
           <tr>
+            <td id="empty"></td>
             <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="empty"></td>
             <td></td>
             <td></td>
           </tr>
         </table>
       </div>
     </div>
-
+  <br>
     <div class="content-page3">
      5. Kesimpulan:
         <p>
-          • Operator Shift G sudah konsisten untuk melaksanakan house keeping sesuai
-          jadwal
-          • Pencapaian dalam bulan Juni 2023 sebesar 96.77%
-          • Diharapkan dengan rutinnya melaksanakan house keeping ini tingkat
-          kepedulian operator terhadap peralatan semakin meningkat dan
-          konsisten
+          <ul style="margin-left: -10px; font-weight:normal">
+            <li>Operator Shift G sudah konsisten untuk melaksanakan house keeping sesuai
+            jadwal</li>
+            <li>Pencapaian dalam bulan Juni 2023 sebesar 96.77%</li>
+            <li>
+            Diharapkan dengan rutinnya melaksanakan house keeping ini tingkat
+            kepedulian operator terhadap peralatan semakin meningkat dan
+            konsisten
+            </li>
+          </ul>
         </p>
     </div>
     <!-- CONTENT -->
+    </div>
 
     <!-- FOOTER LOGO -->
     <span id="footer-logo-page3">

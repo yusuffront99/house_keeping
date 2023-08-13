@@ -17,7 +17,7 @@
         Shift G telah melaksanakan house keeping sebanyak 30 peralatan dari 31 peralatan yang
         terjadwal.
         <br><br>
-        <div class="fw-bold" style="margin-left: 13px; margin-bottom:10px;">Resume House Keeping</div>
+        <div class="fw-bold" style="margin-left: 13px; margin-bottom:3px;">Resume House Keeping</div>
       </p>
       <div id="canvas" style="margin-left: 13px;">
         <img src="{{public_path('images/grafik.jpeg')}}" alt=""  width="100%">
