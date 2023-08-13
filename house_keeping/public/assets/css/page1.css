@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+span#header-logo-left img {
+    height: 105px;
+    margin-top: -35px;
+    margin-left: -40px;
+}
+
+span#header-logo-right img {
+    margin-top: -35px;
+    margin-left: 110px;
+}
+
+img #right {
+    height: 1000%;
+}
+
+.content {
+    margin-top: 100px;
+    margin-left: 25px;
+}
+
+.title-header {
+    margin-top: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title-header {
+    margin-top: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text-month {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.image-content img {
+    width: 90%;
+    padding: 0% 8%;
+}
+
+.title-bottom {
+    margin-top: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+span#footer-logo img {
+    width: 100%;
+    margin-top: 220px;
+    margin-left: 43px;
+}
+
+/* CONTENT PAGE 2 */
+.content-page2 {
+    margin-top: -50px;
+}
+
+.signature-content {
+    margin: 0% 15%;
+}
+
+td.ttd-op {
+    height: 100px;
+}
+
+th.title-name {
+    width: 250px;
+}
+
+span#footer-logo-page2 img {
+    width: 100%;
+    margin-top: 150px;
+    margin-left: 43px;
+    position: sticky;
+}
+
+/* CONTENT PAGE 2 */
+
+
+/* CONTENT PAGE 3 */
+.content-page3 {
+    margin-top: 5px;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+.content-page3 p {
+    margin-left: 13px;
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 58px;
+}
+
+#boiler {
+    padding: 0px 125px;
+}
+
+#turbine {
+    padding: 0px 125px;
+}
+
+span#footer-logo-page3 img {
+    width: 100%;
+    margin-top: 150px;
+    margin-left: 43px;
+}
+
+/* CONTENT PAGE 3 */
+
+/* CONTENT PAGE 4 */
+.content-table{
+    margin-bottom: 213px;
+}
+/* CONTENT PAGE 4 */
