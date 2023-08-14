@@ -68,5 +68,16 @@ class WeeklyController1 extends Controller
 
         return redirect()->route('weekly1.index');
     }
+
+    public function edit($id)
+    {
+        $data_id = Weekly1::where('id', $id)->first();
+        return view('pages.weekly1.edit', compact('data_id'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+    }
     
 }

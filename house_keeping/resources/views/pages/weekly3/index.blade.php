@@ -3,8 +3,8 @@
 
 @section('content')
     <div class="m-auto p-4">
-        Weekly I
-        <hr>
+        <div class="text-center fw-bold d-grid gap-2 bg-danger py-5 text-white fs-2">Weekly III</div>
+        <a href="{{route('home')}}"><i class="bi bi-arrow-left-circle-fill fs-3"></i></a>
         <div class="row">
             <div class="col-lg-12 border border-dark p-3">
                 <div class="card">

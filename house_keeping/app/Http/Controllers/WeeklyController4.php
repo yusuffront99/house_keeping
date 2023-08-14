@@ -66,7 +66,7 @@ class WeeklyController4 extends Controller
 
         $equipment->save();
 
-        return redirect()->route('weekly1.index');
+        return redirect()->route('weekly4.index');
     }
     
 }

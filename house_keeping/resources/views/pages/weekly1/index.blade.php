@@ -3,8 +3,8 @@
 
 @section('content')
     <div class="m-auto p-4">
-        Weekly I
-        <hr>
+        <div class="text-center fw-bold d-grid gap-2 bg-primary py-5 text-white fs-2">Weekly I</div>
+        <a href="{{route('home')}}"><i class="bi bi-arrow-left-circle-fill fs-3"></i></a>
         <div class="row">
             <div class="col-lg-12 border border-dark p-3">
                 <div class="card">
@@ -177,7 +177,15 @@
                         @foreach ($data as $dt)
                         <tr>
                             <td>{{$no++}}</td>
-                            <td><div class="badge bg-danger p-3">{{$dt->agenda}}</div></td>
+                            <td>
+                                <div class="bg-danger p-2 mb-1 text-center text-white fw-bold" style="font-size: 10px;">{{$dt->agenda}}</div>
+
+                                @if ($dt->foto_1 || $dt->foto_2 == 'img_default/white.jpeg')
+                                    <div class="bg-info text-center">
+                                        <a href="{{route('weekly1.edit', $dt->id)}}" class="text-white fs-4"><i class="bi bi-pencil-square"></i></a>
+                                    </div>
+                                @endif
+                            </td>
                             <td>{{$dt->peralatan_boiler}}</td>
                             <td>{{$dt->tgl_boiler}}</td>
                             <td>
