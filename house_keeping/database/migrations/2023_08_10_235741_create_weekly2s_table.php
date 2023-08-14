@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('weekly1s', function (Blueprint $table) {
+        Schema::create('weekly2s', function (Blueprint $table) {
             $table->id();
-            $table->string('agenda')->default('Minggu 2');
+            $table->string('agenda')->default('Minggu 1');
             $table->date('tgl_turbine')->nullable();
             $table->date('tgl_boiler')->nullable();
             $table->string('peralatan_turbine');
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('weekly1s');
+        Schema::dropIfExists('weekly2s');
     }
 };

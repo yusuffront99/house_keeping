@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: -10px;
+    padding: 0px 250px;
+}
+
+.box-header {
+    height: 12%;
+    width: 145%;
+    /* background: salmon; */
+    margin-left: -120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-header img {
+    margin-top: -25px;
+}
+
+.box-content {
+    height: 78%;
+    width: 120%;
+    /* background: greenyellow; */
+    margin-left: -35px;
+}
+
+.box-bottom {
+    margin-left: -120px;
+    height: 10%;
+    width: 145%;
+    /* background: orange; */
+}
+
+.box-bottom img {
+    margin-left: 0px;
+    margin-top: 25px;
+}
+
+.title-header {
+    margin-top: 75px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+
+.text-month {
+    margin-top: 65px;
+    font-size: 20px;
+}
+.image-content {
+    margin-left: 10px;
+}
+
+.image-content img {
+    width: 100%;
+}
+
+.title-bottom {
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* part 2 */
+.box-header-2 {
+    height: 12%;
+    width: 145%;
+    /* background: salmon; */
+    margin-left: -120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.box-header-2 img {
+    margin-top: -25px;
+}
+
+.title-header-2 {
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+.image-content {
+    margin-left: -13px;
+}
+
+.image-content img {
+    width: 100%;
+}
+
+th.title-name {
+    width: 250px;
+}
+
+td.space-ttd {
+    height: 120px;
+}
+
+/* part 2 */
+
+/* part 3 */
+.box-header-3 {
+    height: 12%;
+    width: 145%;
+    /* background: salmon; */
+    margin-left: -120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-header-3 img {
+    margin-top: -25px;
+}
+
+#boiler {
+    padding: 0px 125px;
+}
+
+#turbine {
+    padding: 0px 125px;
+}
+
+.content-3 {
+    font-weight: bold;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.box-bottom-3 {
+    margin-left: -120px;
+    height: 10%;
+    width: 145%;
+    /* background: orange; */
+}
+
+#canvas {
+    margin-left: 18px;
+    margin-top: 15px;
+}
+
+/* part 3 */
+
+/* Part 4 */
+.box-header-4 {
+    height: 12%;
+    width: 145%;
+    /* background: salmon; */
+    margin-left: -120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-header-4 img {
+    margin-top: -25px;
+}
+/* Part 4 */
+
+/* Part 6 */
+th#th-evaluasi {
+    width: 250px;
+}
+th#th-rekomendasi {
+    width: 250px;
+}
+th#th-pic {
+    width: 125px;
+}
+
+td#empty {
+    padding: 10px;
+}
+
+/* Part 6 */
+
+/* CONTENT P1 BOILER */
+.box-content-p1 {
+    height: 70%;
+    width: 120%;
+    /* background: greenyellow; */
+    margin-left: -35px;
+    margin-top: -25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.box-bottom-p1 {
+    margin-left: -120px;
+    height: 15%;
+    width: 145%;
+    /* background: orange; */
+}
+
+.box-bottom-p1 img {
+    margin-top: 110px;
+    position: sticky;
+}
+
+td#before {
+    background-color: rgb(111, 249, 111);
+}
+
+td#process {
+    background: rgb(255, 206, 99);
+}
+
+td#after {
+    background: rgba(131, 193, 255, 0.962);
+}
+
+
+/* CONTENT P1 BOILER */

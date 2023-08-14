@@ -1,14 +1,13 @@
-<div class="page-1">
-      <!-- HEADER LOGO -->
-    <span id="header-logo-left">
-      <img src="{{public_path('images/header.jpeg')}}" alt="" width="60%">
-    </span>
-    <span id="header-logo-right">
-      <img src="{{public_path('images/logo.jpeg')}}" alt="" width="20%">
-    </span>
-     
-    <div class="content-page5">
-      <!-- CONTENT -->
+<div class="container">
+  <div class="box-header-4">
+    <img src="{{public_path('images/header.jpeg')}}" width="60%" alt="" srcset="">
+    <img src="{{public_path('images/logo.jpeg')}}" width="20%" alt="" style="margin-left: 100px;" srcset="">
+  </div>
+  
+  <div class="box-content">
+    <!-- CONTENT -->
+    <div class="content-3">
+       <!-- CONTENT -->
     <div class="content-page3">
      2. Bahan dan Peralatan yang digunakan :
         <ol style="list-style-type: lower-alpha; margin-left:-10px; font-weight:normal;">
@@ -80,9 +79,10 @@
     </div>
     <!-- CONTENT -->
     </div>
-
-    <!-- FOOTER LOGO -->
-    <span id="footer-logo-page3">
-      <img src="{{public_path('images/footer.jpeg')}}" alt="">
-    </span>
-    </div>
+    <!-- CONTENT -->
+  </div>
+  
+  <div class="box-bottom">
+    <img src="{{public_path('images/footer.jpeg')}}" width="100%" alt="" srcset="">
+  </div>
+</div>

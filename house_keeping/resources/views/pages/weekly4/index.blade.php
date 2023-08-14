@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-lg-12 border border-dark p-3">
                 <div class="card">
-                    <form action="{{route('weekly1.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('weekly4.store')}}" method="post" enctype="multipart/form-data">
                         @csrf    
-                        <input type="hidden" name="agenda" value="Minggu 1">
+                        <input type="hidden" name="agenda" value="Minggu 4">
                         <div class="row">
                         <div class="col-lg-6">
                             <div class="card-body bg-danger text-white">

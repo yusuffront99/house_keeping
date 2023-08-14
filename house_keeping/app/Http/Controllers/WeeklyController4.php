@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Weekly1;
+use App\Models\Weekly4;
 use Illuminate\Http\Request;
 
-class WeeklyController1 extends Controller
+class WeeklyController4 extends Controller
 {
     public function index()
     {
-        $data = Weekly1::get();
-        return view('pages.weekly1.index', compact('data'));
+        $data = Weekly4::get();
+        return view('pages.weekly4.index', compact('data'));
     }
 
     public function store(Request $request)
     {
        
         
-        $equipment = new Weekly1();
+        $equipment = new Weekly4();
 
         $equipment->agenda = $request->agenda;
         $equipment->tgl_turbine = $request->tgl_turbine;

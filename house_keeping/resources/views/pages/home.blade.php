@@ -29,7 +29,7 @@
                         Laporan Minggu ke-2
                     </div>
                     <hr>
-                    <a href="" class="btn btn-sm btn-warning">Create <i class="bi bi-plus-circle"></i></a>
+                    <a href="{{route('weekly2.index')}}" class="btn btn-sm btn-warning">Create <i class="bi bi-plus-circle"></i></a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                         Laporan Minggu ke-3
                     </div>
                     <hr>
-                    <a href="" class="btn btn-sm btn-danger">Create <i class="bi bi-plus-circle"></i></a>
+                    <a href="{{route('weekly3.index')}}" class="btn btn-sm btn-danger">Create <i class="bi bi-plus-circle"></i></a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                         Laporan Minggu ke-4
                     </div>
                     <hr>
-                    <a href="" class="btn btn-sm btn-success">Create <i class="bi bi-plus-circle"></i></a>
+                    <a href="{{route('weekly4.index')}}" class="btn btn-sm btn-success">Create <i class="bi bi-plus-circle"></i></a>
                 </div>
             </div>
         </div>
@@ -65,6 +65,4 @@
             </div>
         </div>
     </div>
-
-    @include('pages.report.chart')
 @endsection
