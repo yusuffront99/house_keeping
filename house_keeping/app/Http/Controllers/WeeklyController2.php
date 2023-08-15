@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EquipmentItem;
 use App\Models\Weekly2;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class WeeklyController2 extends Controller
 {
     public function index()
     {
+        $items_b = EquipmentItem::where('category','B')->get();
+        $items_t = EquipmentItem::where('category','T')->get();
         $data = Weekly2::get();
-        return view('pages.weekly2.index', compact('data'));
+        return view('pages.weekly2.index', compact('data','items_b','items_t'));
     }
 
     public function store(Request $request)
@@ -65,6 +69,65 @@ class WeeklyController2 extends Controller
 
 
         $equipment->save();
+
+        return redirect()->route('weekly2.index');
+    }
+
+    public function edit($id)
+    {
+        $items_b = EquipmentItem::where('category','B')->get();
+        $items_t = EquipmentItem::where('category','T')->get();
+        $data_id = Weekly2::where('id', $id)->first();
+
+        return view('pages.weekly2.edit', compact('data_id','items_b','items_t'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+
+        if($request->file('foto_1')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $data['foto_1'] = $request->file('foto_1')->store('pictures','public');
+        }
+
+        if($request->file('foto_2')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $data['foto_2'] = $request->file('foto_2')->store('pictures','public');
+        }
+
+        if($request->file('foto_3')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $data['foto_3'] = $request->file('foto_3')->store('pictures','public');
+        }
+
+        if($request->file('foto_4')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $data['foto_4'] = $request->file('foto_4')->store('pictures','public');
+        }
+        if($request->file('foto_5')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $data['foto_5'] = $request->file('foto_5')->store('pictures','public');
+        }
+        if($request->file('foto_6')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $data['foto_6'] = $request->file('foto_6')->store('pictures','public');
+        }
+
+        $item = Weekly2::findOrFail($id);
+        $item->update($data);
 
         return redirect()->route('weekly2.index');
     }

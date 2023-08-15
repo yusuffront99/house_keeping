@@ -26,13 +26,13 @@
         <ol style="list-style-type: lower-alpha; margin-left:-10px; font-weight:normal;">
           <li>Area Turbine
             <ul style="margin-left: -30px;">
-              <li>M Adhari</li>
-              <li>Bagus Dewantoro</li>
+              <li>{{$lap_hk[0]->op_turbine1}}</li>
+              <li>{{$lap_hk[0]->op_turbine2}}</li>
             </ul>
           </li>
           <li>Area Boiler
             <ul style="margin-left: -30px;">
-              <li>M Yusuf</li>
+              <li>{{$lap_hk[0]->op_boiler1}}</li>
             </ul>
           </li>
         </ol>
@@ -64,18 +64,9 @@
   <br>
     <div class="content-page3">
      5. Kesimpulan:
-        <p>
-          <ul style="margin-left: -10px; font-weight:normal">
-            <li>Operator Shift G sudah konsisten untuk melaksanakan house keeping sesuai
-            jadwal</li>
-            <li>Pencapaian dalam bulan Juni 2023 sebesar 96.77%</li>
-            <li>
-            Diharapkan dengan rutinnya melaksanakan house keeping ini tingkat
-            kepedulian operator terhadap peralatan semakin meningkat dan
-            konsisten
-            </li>
-          </ul>
-        </p>
+        <div style="font-weight: normal; margin-left:-10px; text-align:justify;">
+          {!!$lap_hk[0]->conclusion!!}
+        </div>
     </div>
     <!-- CONTENT -->
     </div>

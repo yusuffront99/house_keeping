@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Weekly4 extends Model
 {
     use HasFactory;
+
+    
+    protected $guarded = ['oldImage'];
 }

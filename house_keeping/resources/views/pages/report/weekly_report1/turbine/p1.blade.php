@@ -23,7 +23,7 @@
         <tr>
           <td>G</td>
           <td>{{$rp->peralatan_turbine}}</td>
-          <td>{{$rp->posisi_turbine}}</td>
+          <td>Lt.{{$rp->posisi_turbine}} Turbine</td>
           <td>{{$rp->tgl_turbine}}</td>
         </tr>
       </table>

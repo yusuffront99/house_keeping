@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HouseKeeping;
 use App\Models\Weekly1;
 use App\Models\Weekly2;
 use App\Models\Weekly3;
@@ -13,11 +14,15 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return view('pages.home');
+        $btn_check = Weekly4::get();
+        return view('pages.home', compact('btn_check'));
     }
 
     public function print()
     {
+        $lap_house_keeping = HouseKeeping::take('1')->latest()->get();
+        $year = date('Y');
+
         $weekly1 = Weekly1::where('agenda','Minggu 1')->get();
         $weekly2 = Weekly2::where('agenda','Minggu 2')->get();
         $weekly3 = Weekly3::where('agenda','Minggu 3')->get();
@@ -40,7 +45,12 @@ class HomeController extends Controller
         $img_weekly4_p3 = Weekly4::skip(4)->take(2)->get();
 
         $pdf = PDF::setPaper('a4', 'portrait')
-        ->loadView('pages.report.laporan_house_keeping', [
+        ->loadView('pages.report.laporan_house_keeping', 
+        
+        [
+            'lap_hk' => $lap_house_keeping,
+            'year' => $year,
+
             'weekly1' => $weekly1,
             'weekly2' => $weekly2,
             'weekly3' => $weekly3,

@@ -30,10 +30,10 @@
                                                 <div class="form-group mb-1">
                                                     <label for="">Peralatan Boiler</label>
                                                     <select name="peralatan_boiler" id="" class="form-select">
-                                                        <option value="-">-- Peralatan Boiler --</option>
-                                                        <option value="Pulverizer 3A">Pulverizer 3A</option>
-                                                        <option value="Pulverizer 3B">Pulverizer 3B</option>
-                                                        <option value="Pulverizer 3C">Pulverizer 3C</option>
+                                                    <option value="-">-- Peralatan Boiler --</option>
+                                                    @foreach ($items_b as $ib)
+                                                        <option value="{{$ib->name_equipment}}">{{$ib->name_equipment}}</option>    
+                                                    @endforeach
                                                     </select>
                                                 </div>
                                             </div>
@@ -42,12 +42,9 @@
                                                     <label for="">Posisi Peralatan</label>
                                                     <select name="posisi_boiler" id="" class="form-select">
                                                         <option value="-">-- Posisi Peralatan --</option>
-                                                        <option value="Lantai 1 (Boiler)">Lantai 1 (Boiler)</option>
-                                                        <option value="Lantai 2 (Boiler)">Lantai 2 (Boiler)</option>
-                                                        <option value="Lantai 3 (Boiler)">Lantai 3 (Boiler)</option>
-                                                        <option value="Lantai 1 (Turbine)">Lantai 1 (Turbine)</option>
-                                                        <option value="Lantai 2 (Turbine)">Lantai 2 (Turbine)</option>
-                                                        <option value="Lantai 3 (Turbine)">Lantai 3 (Turbine)</option>
+                                                        <option value="1">Lt.1 (Boiler)</option>
+                                                        <option value="2">Lt.2 (Boiler)</option>
+                                                        <option value="3">Lt.3 (Boiler)</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -98,10 +95,10 @@
                                                     <div class="form-group mb-1">
                                                         <label for="">Peralatan Turbine</label>
                                                         <select name="peralatan_turbine" id="" class="form-select">
-                                                            <option value="-">-- Peralatan Turbine --</option>
-                                                            <option value="Close Loop 3A">Close Loop 3A</option>
-                                                            <option value="Close Loop 3B">Close Loop 3B</option>
-                                                            <option value="Close Loop 3C">Close Loop 3C</option>
+                                                        <option value="-">-- Peralatan Turbine --</option>
+                                                        @foreach ($items_t as $it)
+                                                            <option value="{{$it->name_equipment}}">{{$it->name_equipment}}</option>    
+                                                        @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -110,12 +107,10 @@
                                                         <label for="">Posisi Peralatan</label>
                                                         <select name="posisi_turbine" id="" class="form-select">
                                                             <option value="-">-- Posisi Peralatan --</option>
-                                                            <option value="Lantai 1 (Boiler)">Lantai 1 (Boiler)</option>
-                                                            <option value="Lantai 2 (Boiler)">Lantai 2 (Boiler)</option>
-                                                            <option value="Lantai 3 (Boiler)">Lantai 3 (Boiler)</option>
-                                                            <option value="Lantai 1 (Turbine)">Lantai 1 (Turbine)</option>
-                                                            <option value="Lantai 2 (Turbine)">Lantai 2 (Turbine)</option>
-                                                            <option value="Lantai 3 (Turbine)">Lantai 3 (Turbine)</option>
+                                                            <option value="1">Lt.1 (Turbine)</option>
+                                                            <option value="2">Lt.2 (Turbine)</option>
+                                                            <option value="3">Lt.3 (Turbine)</option>
+                                                            <option value="Cooling Tower Fan">Cooling Tower Fan (Turbine)</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -178,12 +173,12 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>
-                                <div class="bg-danger p-2 mb-1 text-center text-white fw-bold" style="font-size: 10px;">{{$dt->agenda}}</div>
-
-                                @if ($dt->foto_1 || $dt->foto_2 == 'img_default/white.jpeg')
+                                @if ($dt->foto_1 && $dt->foto_2 && $dt->foto_3 && $dt->foto_4 && $dt->foto_5 && $dt->foto_6 == 'img_default/white.jpeg')
                                     <div class="bg-info text-center">
                                         <a href="{{route('weekly1.edit', $dt->id)}}" class="text-white fs-4"><i class="bi bi-pencil-square"></i></a>
                                     </div>
+                                @else
+                                <div class="bg-danger p-2 mb-1 text-center text-white fw-bold" style="font-size: 10px;">{{$dt->agenda}}</div>
                                 @endif
                             </td>
                             <td>{{$dt->peralatan_boiler}}</td>

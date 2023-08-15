@@ -11,7 +11,7 @@
             LAPORAN HOUSE KEEPING <br> OPERATOR SHIFT G
             <br>
             <div class="text-month">
-                BULAN JULI 2023
+                {{$lap_hk[0]->bln_laporan}} {{$year}}
             </div>
         </div>
       <br>
@@ -22,7 +22,7 @@
         PT PLN (PERSERO) UNIT INDUK <br>
         PEMBANGKITAN DAN PENYALURAN KALIMANTAN <br>
         UNIT PELAKSANA PEMBANGKITAN ASAM ASAM <br>
-        TAHUN 2023
+        TAHUN {{$year}}
       </div>
     </div>
     <!-- CONTENT -->

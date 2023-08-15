@@ -8,18 +8,13 @@
     <!-- CONTENT -->
     <div class="content-3">
       1. Executive Summary
-      <p style="font-weight: normal; font-size:15px; margin-left:18px;">
-        Pada semester I tahun 2023 rencana pelaksanaan house keeping sebanyak 18 peratalan
-        setiap bulannya berdasarkan nota dinas nomor 1599/KIT/.02.01/MAN II OP/2022 perihal
-        Jadwal House Keeping / 5S Semester 1 Tahun 2023. Dimana setiap peralatan berbeda –
-        beda frekuensi house keepingnya (Weekly, 2 Week, Monthly). Bulan Juni 2023 Operator 
-        Shift G telah melaksanakan house keeping sebanyak 30 peralatan dari 31 peralatan yang
-        terjadwal.
-        <br><br>
-      </p>
+      <div style="font-size:15px; margin:-10px 0px 3px 18px; font-weight:normal; text-align:justify;">
+        {!!$lap_hk[0]->summary!!}
+      </div>
+      <br>
       <div class="fw-bold" style="margin:-10px 0px 3px 18px">Resume House Keeping</div>
       <div id="canvas">
-        <img src="{{public_path('images/grafik.jpeg')}}" alt=""  width="100%">
+        <img src="{{public_path('storage/'.$lap_hk[0]->graphic)}}" alt=""  width="100%">
       </div>
 
       <br>

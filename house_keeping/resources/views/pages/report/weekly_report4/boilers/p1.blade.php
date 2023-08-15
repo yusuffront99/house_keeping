@@ -23,7 +23,7 @@
         <tr>
           <td>G</td>
           <td>{{$rp->peralatan_boiler}}</td>
-          <td>{{$rp->posisi_boiler}}</td>
+          <td>Lt.{{$rp->posisi_boiler}} Boiler</td>
           <td>{{$rp->tgl_boiler}}</td>
         </tr>
       </table>

@@ -58,11 +58,41 @@
             </div>
         </div>
     </div>
+    <hr>
     <div class="my-5">
-        <div class="d-flex justify-content-center">
-            <div class="px-5 py-3 border border-primary bg-primary fw-bold">
-                <a href="{{route('print')}}" class="text-white" style="text-decoration: none;"><i class="bi bi-printer"></i> Cetak Laporan</a>
+        <br>
+        @if ($btn_check->count() < 5)
+        <div class="bagde bg-warning p-3 text-white text-center fw-bold mb-3">Silakan Lengkapi Laporan Mingguan 1-4 <i class="bi bi-emoji-laughing-fill"></i></div>
+        <div class="d-flex justify-content-evenly" style="margin: 0rem 35rem;">
+            <div class="d-flex justify-content-center" style="opacity: 50%;">
+                <div class="px-3 rounded-pill py-2 border border-success bg-success fw-bold">
+                    <a href="" class="text-white" style="text-decoration: none;"><i class="bi bi-cloud-plus fs-2 text-center"></i></a>
+                </div>
+            </div>
+            <br>
+            <div class="d-flex justify-content-space" style="opacity: 50%;">
+                <div class="px-3 rounded-pill py-2 border border-primary bg-primary fw-bold">
+                    <a href="" class="text-white" style="text-decoration: none;"><i class="bi bi-printer fs-2"></i></a>
+                </div>
             </div>
         </div>
+        @elseif($btn_check->count() == 5)
+        
+        <div class="d-flex justify-content-evenly" style="margin: 0rem 35rem;">
+        <div class="d-flex justify-content-center">
+            <div class="px-3 rounded-pill py-2 border border-success bg-success fw-bold">
+                <a href="{{route('house_keeping.index')}}" class="text-white" style="text-decoration: none;"><i class="bi bi-cloud-plus fs-2 text-center"></i></a>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-space">
+            <div class="px-3 rounded-pill py-2 border border-primary bg-primary fw-bold">
+                <a href="{{route('print')}}" class="text-white" style="text-decoration: none;"><i class="bi bi-printer fs-2"></i></a>
+            </div>
+        </div>
+        </div>
+        @else
+        no
+        @endif
     </div>
 @endsection

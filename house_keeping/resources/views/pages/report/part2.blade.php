@@ -12,7 +12,7 @@
             <br><br><br>
             LEMBAR PENGESAHAN
             <div class="text-month" style="font-weight: normal; margin-top:10px; font-size:18px;">
-              01 Juli 2023
+            {{Carbon\carbon::createFromFormat('Y-m-d', $lap_hk[0]->tgl_pengesahan)->isoFormat('D MMMM Y')}}
             </div>
         </div>
         <br>
@@ -21,26 +21,26 @@
             <th colspan="2" style="font-size: 12px;">Prepared by</th>
           </tr>
           <tr>
-            <th class="title-name">Bagus Dewantoro</th>
-            <th class="title-name">Muhammad Adhari</th>
+            <th class="title-name">{{$lap_hk[0]->op_turbine1}}</th>
+            <th class="title-name">{{$lap_hk[0]->op_turbine2}}</th>
           </tr>
           <tr>
-            <td class="space-ttd"></td>
-            <td></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opt1)}}" width="100px" alt=""></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opt2)}}" width="100px" alt=""></td>
           </tr>
           <tr>
-            <td>JT OP Turbine</td>
-            <td>JT OP Turbine</td>
+            <td>JO Operator Turbine</td>
+            <td>JO Operator Turbine</td>
           </tr>
-
+<br>
           <tr>
-            <th class="title-name" colspan="2">M Yusuf</th>
+            <th class="title-name" colspan="2">{{$lap_hk[0]->op_boiler1}}</th>
+          </tr>
+          <tr class="text-center">
+            <td class="space-ttd" colspan="2"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opb1)}}" width="100px" alt=""></td>
           </tr>
           <tr>
-            <td class="space-ttd" colspan="2"></td>
-          </tr>
-          <tr>
-            <td colspan="2">JT OP Boiler</td>
+            <td colspan="2">JO Operator Boiler</td>
           </tr>
           <br><br>
           <tr>
@@ -48,15 +48,15 @@
             <th style="font-size: 12px;">Aknowledged by</th>
           </tr>
           <tr>
-            <th class="title-name">Bagus Dewantoro</th>
-            <th class="title-name">Muhammad Adhari</th>
+            <th class="title-name">{{$lap_hk[0]->team_leader}}</th>
+            <th class="title-name">{{$lap_hk[0]->manbagop}}</th>
           </tr>
           <tr>
-            <td class="space-ttd"></td>
-            <td></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_tl)}}" width="100px" alt=""></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_manbag)}}" width="100px" alt=""></td>
           </tr>
           <tr>
-            <td>Team Leader Shift G</td>
+            <td>Team Leader Shift {{$lap_hk[0]->shift}}</td>
             <td>Manager Bagian Operasi</td>
           </tr>
         </table>
