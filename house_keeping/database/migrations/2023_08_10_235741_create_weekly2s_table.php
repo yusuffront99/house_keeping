@@ -20,12 +20,12 @@ return new class extends Migration
             $table->string('peralatan_boiler');
             $table->string('posisi_turbine');
             $table->string('posisi_boiler');
-            $table->text('foto_1')->default('img_default/white.jpeg');
-            $table->text('foto_2')->default('img_default/white.jpeg');
-            $table->text('foto_3')->default('img_default/white.jpeg');
-            $table->text('foto_4')->default('img_default/white.jpeg');
-            $table->text('foto_5')->default('img_default/white.jpeg');
-            $table->text('foto_6')->default('img_default/white.jpeg');
+            $table->text('foto_1')->default('-');
+            $table->text('foto_2')->default('-');
+            $table->text('foto_3')->default('-');
+            $table->text('foto_4')->default('-');
+            $table->text('foto_5')->default('-');
+            $table->text('foto_6')->default('-');
             $table->timestamps();
         });
     }

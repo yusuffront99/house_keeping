@@ -7,7 +7,11 @@
   <div class="box-content-p1">
     <!-- CONTENT -->
       @foreach ($img_boil2 as $rp)
-      <table class="table table-bordered text-center" style="background: #d3d2d2; font-size:14px; font-weight:normal;">
+     
+      @if($rp->foto_4 == 'img_default/white.jpeg')
+      
+      @else
+       <table class="table table-bordered text-center" style="background: #d3d2d2; font-size:14px; font-weight:normal;">
         <tr>
           <th>Shift</th>
           <th>Equipment</th>
@@ -28,13 +32,14 @@
           <td id="process">Proses</td>
           <td id="after">Sesudah</td>
         </tr>
-        @if ($rp->foto_4 == 'img_default/white.jpeg')
+        @if ($rp->foto_4 == 'Maintenance')
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td colspan="3">Maintenance</td>
         </tr>
-
+        @elseif ($rp->foto_4 == '-')
+        <tr>
+          <td colspan="3">-</td>
+        </tr>
         @else
         <tr>
           <td><img src="{{public_path('storage/' . $rp->foto_4)}}" alt="" width="190px" height="200"></td>
@@ -43,6 +48,7 @@
         </tr>
         @endif
       </table>
+      @endif
 
       @endforeach    
     <!-- CONTENT -->

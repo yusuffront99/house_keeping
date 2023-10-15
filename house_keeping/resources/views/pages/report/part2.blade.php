@@ -25,8 +25,8 @@
             <th class="title-name">{{$lap_hk[0]->op_turbine2}}</th>
           </tr>
           <tr>
-            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opt1)}}" width="100px" alt=""></td>
-            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opt2)}}" width="100px" alt=""></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opt1)}}" width="70px" height="" alt=""></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opt2)}}" width="70px" alt=""></td>
           </tr>
           <tr>
             <td>JO Operator Turbine</td>
@@ -37,7 +37,7 @@
             <th class="title-name" colspan="2">{{$lap_hk[0]->op_boiler1}}</th>
           </tr>
           <tr class="text-center">
-            <td class="space-ttd" colspan="2"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opb1)}}" width="100px" alt=""></td>
+            <td class="space-ttd" colspan="2"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_opb1)}}" width="70px" alt=""></td>
           </tr>
           <tr>
             <td colspan="2">JO Operator Boiler</td>
@@ -52,8 +52,8 @@
             <th class="title-name">{{$lap_hk[0]->manbagop}}</th>
           </tr>
           <tr>
-            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_tl)}}" width="100px" alt=""></td>
-            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_manbag)}}" width="100px" alt=""></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_tl)}}" width="70px" alt=""></td>
+            <td class="space-ttd"><img src="{{public_path('storage/'. $lap_hk[0]->ttd_manbag)}}" width="70px" alt=""></td>
           </tr>
           <tr>
             <td>Team Leader Shift {{$lap_hk[0]->shift}}</td>

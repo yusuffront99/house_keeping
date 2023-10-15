@@ -113,7 +113,8 @@
                                                     <option value="1" {{$data_id->posisi_turbine == '1' ? 'selected' : ''}}>Lt.1 (Turbine)</option>
                                                     <option value="2" {{$data_id->posisi_turbine == '2' ? 'selected' : ''}}>Lt.2 (Turbine)</option>
                                                     <option value="3" {{$data_id->posisi_turbine == '3' ? 'selected' : ''}}>Lt.3 (Turbine)</option>
-                                                    <option value="Cooling Tower Fan"  {{$data_id->posisi_turbine == 'Cooling Tower Fan' ? 'selected' : ''}}>Cooling Tower Fan (Turbine)</option>
+                                                    <option value="Cooling Tower" {{$data_id->posisi_turbine == 'Cooling Tower' ? 'selected' : ''}}>Cooling Tower (Turbine)</option>
+                                                     <option value="Emergency Diesel" {{$data_id->posisi_turbine == 'Emergency Diesel' ? 'selected' : ''}}>Lt. Emergency Diesel</option>
                                                 </select>
                                             </div>
                                         </div>

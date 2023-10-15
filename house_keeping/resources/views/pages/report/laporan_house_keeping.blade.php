@@ -13,17 +13,17 @@
   @include('pages.report.part3')
   @include('pages.report.part4')
   @include('pages.report.part5')
-
+  
   <!-- WEEKLY 1 -->
   @include('pages.report.weekly_report1.boilers.p1')
   @include('pages.report.weekly_report1.boilers.p2')
   @include('pages.report.weekly_report1.boilers.p3')
-
+  
   @include('pages.report.weekly_report1.turbine.p1')
   @include('pages.report.weekly_report1.turbine.p2')
   @include('pages.report.weekly_report1.turbine.p3')
    <!-- WEEKLY 1 -->
-
+   
   <!-- WEEKLY 2 -->
   @include('pages.report.weekly_report2.boilers.p1')
   @include('pages.report.weekly_report2.boilers.p2')
@@ -53,5 +53,8 @@
   @include('pages.report.weekly_report4.turbine.p2')
   @include('pages.report.weekly_report4.turbine.p3')
    <!-- WEEKLY 4 -->
+  
+
+  
 </body>
 </html>

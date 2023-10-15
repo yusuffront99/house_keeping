@@ -6,6 +6,7 @@ use App\Models\EquipmentItem;
 use App\Models\Weekly1;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic;
 
 class WeeklyController1 extends Controller
 {
@@ -21,58 +22,76 @@ class WeeklyController1 extends Controller
     {
        
         
-        $equipment = new Weekly1();
+        // $equipment = new Weekly1();
 
-        $equipment->agenda = $request->agenda;
-        $equipment->tgl_turbine = $request->tgl_turbine;
-        $equipment->tgl_boiler = $request->tgl_boiler;
-        $equipment->peralatan_boiler = $request->peralatan_boiler;
-        $equipment->peralatan_turbine = $request->peralatan_turbine;
-        $equipment->posisi_turbine = $request->posisi_turbine;
-        $equipment->posisi_boiler = $request->posisi_boiler;
-        // $equipment->foto_1 = $fileName1;
+        // $equipment->agenda = $request->agenda;
+        // $equipment->tgl_turbine = $request->tgl_turbine;
+        // $equipment->tgl_boiler = $request->tgl_boiler;
+        // $equipment->peralatan_boiler = $request->peralatan_boiler;
+        // $equipment->peralatan_turbine = $request->peralatan_turbine;
+        // $equipment->posisi_turbine = $request->posisi_turbine;
+        // $equipment->posisi_boiler = $request->posisi_boiler;
+
+
 
         
-
-        if($request->hasFile('foto_1'))
-        {
-            $fileName1 = $request->file('foto_1')->store('pictures','public');
-            $equipment->foto_1 =  $fileName1;
+        // if($request->hasFile('foto_1'))
+        // {
+        //     $fileName1 = $request->file('foto_1')->store('pictures','public');
+        // }
+        $image1 = $request->file('foto_1')->store('pictures','public');
+        $img = Weekly1::make($image1);
+        if (Weekly1::make($image1)->width() > 720) {
+            $img->resize(720, null, function ($constraint) {$constraint->aspectRatio();
+            });
         }
-        if($request->hasFile('foto_2'))
-        {
-            $fileName2 = $request->file('foto_2')->store('pictures','public');
-            $equipment->foto_2 =  $fileName2;
-        }
+        $img->save(public_path('storage/pictures/') . $image1);
+      
 
-        if($request->hasFile('foto_3'))
-        {
-            $fileName3 = $request->file('foto_3')->store('pictures','public');
-            $equipment->foto_3 =  $fileName3;
-        }
+        // Weekly1::create([
+        //     'agenda' => $request->input('agenda'),
+        //     'tgl_turbine' => $request->input('tgl_turbine'),
+        //     'tgl_boiler' => $request->input('tgl_boiler'),
+        //     'peralatan_boiler' => $request->input('peralatan_boiler'),
+        //     'peralatan_turbine' => $request->input('peralatan_turbine'),
+        //     'posisi_boiler' => $request->input('posisi_boiler'),
+        //     'posisi_turbine' => $request->input('posisi_turbine'),
+        //     'foto_1' => $filename1,
+        // ]);
 
-        if($request->hasFile('foto_4'))
-        {
-            $fileName4 = $request->file('foto_4')->store('pictures','public');
-            $equipment->foto_4 =  $fileName4;
-        }
-
-        if($request->hasFile('foto_5'))
-        {
-            $fileName5 = $request->file('foto_5')->store('pictures','public');
-            $equipment->foto_5 =  $fileName5;
-        }
-
-        if($request->hasFile('foto_6'))
-        {
-            $fileName6 = $request->file('foto_6')->store('pictures','public');
-            $equipment->foto_6 =  $fileName6;
-        }
+        return 'success';
 
 
-        $equipment->save();
+        // if($request->hasFile('foto_2'))
+        // {
+        //     $fileName2 = $request->file('foto_2')->store('pictures','public');
+        //     $equipment->foto_2 =  $fileName2;
+        // }
 
-        return redirect()->route('weekly1.index');
+        // if($request->hasFile('foto_3'))
+        // {
+        //     $fileName3 = $request->file('foto_3')->store('pictures','public');
+        //     $equipment->foto_3 =  $fileName3;
+        // }
+
+        // if($request->hasFile('foto_4'))
+        // {
+        //     $fileName4 = $request->file('foto_4')->store('pictures','public');
+        //     $equipment->foto_4 =  $fileName4;
+        // }
+
+        // if($request->hasFile('foto_5'))
+        // {
+        //     $fileName5 = $request->file('foto_5')->store('pictures','public');
+        //     $equipment->foto_5 =  $fileName5;
+        // }
+
+        // if($request->hasFile('foto_6'))
+        // {
+        //     $fileName6 = $request->file('foto_6')->store('pictures','public');
+        //     $equipment->foto_6 =  $fileName6;
+        // }
+
     }
 
     public function edit($id)

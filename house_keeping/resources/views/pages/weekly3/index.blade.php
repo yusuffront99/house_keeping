@@ -110,7 +110,8 @@
                                                             <option value="1">Lt.1 (Turbine)</option>
                                                             <option value="2">Lt.2 (Turbine)</option>
                                                             <option value="3">Lt.3 (Turbine)</option>
-                                                            <option value="Cooling Tower Fan">Cooling Tower Fan (Turbine)</option>
+                                                             <option value="Cooling Tower">Cooling Tower (Turbine)</option>
+                                                            <option value="Emergency Diesel">Lt. Emergency Diesel</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -173,13 +174,9 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>
-                                @if ($dt->foto_1 && $dt->foto_2 && $dt->foto_3 && $dt->foto_4 && $dt->foto_5 && $dt->foto_6 == 'img_default/white.jpeg')
-                                    <div class="bg-info text-center">
-                                        <a href="{{route('weekly3.edit', $dt->id)}}" class="text-white fs-4"><i class="bi bi-pencil-square"></i></a>
-                                    </div>
-                                @else
-                                <div class="bg-danger p-2 mb-1 text-center text-white fw-bold" style="font-size: 10px;">{{$dt->agenda}}</div>
-                                @endif
+                               <div class="bg-info text-center">
+                                    <a href="{{route('weekly3.edit', $dt->id)}}" class="text-white fs-4"><i class="bi bi-pencil-square"></i></a>
+                                </div>
                             </td>
                             <td>{{$dt->peralatan_boiler}}</td>
                             <td>{{$dt->tgl_boiler}}</td>

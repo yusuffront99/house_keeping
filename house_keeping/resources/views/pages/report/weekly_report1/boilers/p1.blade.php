@@ -34,13 +34,10 @@
           <td id="process">Proses</td>
           <td id="after">Sesudah</td>
         </tr>
-        @if ($rp->foto_1 == 'img_default/white.jpeg')
+        @if ($rp->foto_1 == 'Maintenance')
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td colspan="3">Maintenance</td>
         </tr>
-
         @else
         <tr>
           <td><img src="{{public_path('storage/' . $rp->foto_1)}}" alt="" width="190px" height="200"></td>
